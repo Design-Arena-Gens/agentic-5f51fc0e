@@ -1,0 +1,59 @@
+:root {
+  --bg: #0b0d10;
+  --card: #12161a;
+  --text: #e6eef7;
+  --muted: #9fb1c1;
+  --accent: #4ea1ff;
+  --border: #1e242b;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 1rem; }
+
+.site-header, .site-footer { border-bottom: 1px solid var(--border); }
+.site-footer { border-top: 1px solid var(--border); border-bottom: none; margin-top: 2rem; padding: 1rem 0; color: var(--muted); }
+.site-header h1 { font-size: 1.1rem; font-weight: 600; margin: 0.25rem 0; color: var(--text); }
+
+.stack { display: grid; gap: 1rem; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset, 0 8px 24px rgba(0,0,0,0.4);
+}
+.card.error { border-color: #ff6b6b; color: #ffdede; }
+
+label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+.row { display: grid; grid-template-columns: 1fr auto; gap: 0.5rem; }
+input[type="url"] {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0f1317;
+  color: var(--text);
+}
+button {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #2a71d0;
+  background: linear-gradient(180deg, #4ea1ff, #2d7ff7);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+button[disabled] { opacity: 0.6; cursor: default; }
+
+.hint { color: var(--muted); margin-top: 0.5rem; }
+.muted { color: var(--muted); }
+.small { font-size: 0.9rem; }
+.result-title { margin: 0 0 0.25rem 0; }
+.description { margin-top: 0.5rem; line-height: 1.6; }
+.media { margin-top: 0.75rem; }
+.media video, .media img { width: 100%; max-height: 480px; object-fit: contain; border-radius: 10px; background: #0f1317; }
+.thumbs { margin-top: 0.75rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 0.5rem; }
+.thumbs img { width: 100%; height: 80px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
